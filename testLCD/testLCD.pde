@@ -36,7 +36,7 @@ const int D5=5; //declaration constante de broche
 const int D6=6; //declaration constante de broche 
 const int D7=7; //declaration constante de broche
 
-char *a="Je t'aime";
+char *a="<3 Mon Ange <3";
 
 
 // --- Déclaration des variables globales ---
@@ -70,7 +70,7 @@ delay(10); // pour laisser temps effacer écran
 
 void loop(){ // debut de la fonction loop()
 
-for(int i=0; i<9;i++)
+for(int i=0; i<14;i++)
   {
   lcd.setCursor(i,0);
   lcd.print(a[i]);

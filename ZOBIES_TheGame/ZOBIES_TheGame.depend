@@ -1,0 +1,74 @@
+# depslib dependency file v1.0
+1307021569 source:d:\downloads\prog_sdl\zobies_thegame\constantes.c
+	"constantes.h"
+
+1308262127 d:\downloads\prog_sdl\zobies_thegame\constantes.h
+
+1307046837 source:d:\downloads\prog_sdl\zobies_thegame\menu.c
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	"constantes.h"
+	"menu.h"
+
+1307729496 source:d:\downloads\prog_sdl\zobies_thegame\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	<fmodex/fmod.h>
+	"constantes.h"
+	"menu.hpp"
+	"options.hpp"
+	"jouer.hpp"
+	"timer.hpp"
+
+1307046638 d:\downloads\prog_sdl\zobies_thegame\menu.h
+
+1307046862 d:\downloads\prog_sdl\zobies_thegame\options.h
+
+1307050064 source:d:\downloads\prog_sdl\zobies_thegame\options.cpp
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	"constantes.h"
+	"options.hpp"
+
+1307050047 source:d:\downloads\prog_sdl\zobies_thegame\menu.cpp
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	"constantes.h"
+	"menu.hpp"
+
+1307049736 d:\downloads\prog_sdl\zobies_thegame\menu.hpp
+
+1307049850 d:\downloads\prog_sdl\zobies_thegame\options.hpp
+
+1309081049 source:d:\downloads\prog_sdl\zobies_thegame\jouer.cpp
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+	"constantes.h"
+	"jouer.hpp"
+
+1308261634 d:\downloads\prog_sdl\zobies_thegame\jouer.hpp
+
+1307729567 d:\downloads\prog_sdl\zobies_thegame\timer.hpp
+
+1307730374 source:d:\downloads\prog_sdl\zobies_thegame\timer.cpp
+	<stdlib.h>
+	<stdio.h>
+	<SDL/SDL.h>
+	"constantes.h"
+	"timer.hpp"
+
