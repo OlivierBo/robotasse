@@ -84,6 +84,7 @@ public class Fenetre extends JFrame {
 		north.add(boutonLancer );
 		north.add(boutonArreter);
 		boutonArreter.setEnabled (false);
+		boutonContinuer.setEnabled (false);
 		north.add(boutonContinuer);
 		
 		label1.setHorizontalAlignment(JLabel.CENTER );
@@ -162,6 +163,11 @@ public class Fenetre extends JFrame {
 		* Redéfinition de la méthode actionPerformed
 		*/
 		public void actionPerformed (ActionEvent arg0) {
+			boutonLancer.setEnabled (false);
+			boutonArreter.setEnabled (true);
+			comboBoxNbE.setEnabled (true);
+			comboBoxNbI.setEnabled (true);
+			comboBoxTypeResolution.setEnabled (true);
 		label1.setText("Vous avez cliqué sur le bouton Lancer");
 
 		}
@@ -172,6 +178,11 @@ public class Fenetre extends JFrame {
 		* Redéfinition de la méthode actionPerformed
 		*/
 		public void actionPerformed (ActionEvent arg0) {
+			boutonLancer.setEnabled (true);
+			boutonArreter.setEnabled (false);
+			comboBoxNbE.setEnabled (false);
+			comboBoxNbI.setEnabled (false);
+			comboBoxTypeResolution.setEnabled (false);
 		label1.setText("Vous avez cliqué sur le bouton Arreter");
 		
 		}
@@ -182,8 +193,9 @@ public class Fenetre extends JFrame {
 		* Redéfinition de la méthode actionPerformed
 		*/
 		public void actionPerformed (ActionEvent arg0) {
+			boutonLancer.setEnabled (false);
 		label1.setText("Vous avez cliqué sur le bouton Continuer");
-		
+
 		}
 		}
 }
