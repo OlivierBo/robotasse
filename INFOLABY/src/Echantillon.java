@@ -4,6 +4,8 @@ public class Echantillon {
 	private Individu individus[]; // Tableau des individus de l'échantillon
 	
 	private int nbIndividu; // Nombre d'individu dans l'échantillon
+	
+	private int tempsResolution;
 
 	//Constructeur
 	public Echantillon(int n){
@@ -12,6 +14,8 @@ public class Echantillon {
 		for(int i=0;i<n;i++){
 			individus[i] = new Individu();	
 			}
+		nbIndividu=n;
+		setTempsResolution(0);
 	}
 	
 	
@@ -27,6 +31,18 @@ public class Echantillon {
 	
 	public void setNbIndividu(int n){
 		this.nbIndividu=n;
+	}
+
+
+
+	public int getTempsResolution() {
+		return tempsResolution;
+	}
+
+
+
+	public void setTempsResolution(int tempsResolution) {
+		this.tempsResolution = tempsResolution;
 	}
 
 }
