@@ -1,5 +1,5 @@
 
-public class Individu implements Mouvement{
+public class Individu{
 
 	public char[][] map; //Matrice qui sera visualisée
 	
@@ -18,4 +18,6 @@ public class Individu implements Mouvement{
 		return chemin;
 		
 	}
+
+	
 }

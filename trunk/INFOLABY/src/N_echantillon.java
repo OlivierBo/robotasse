@@ -8,10 +8,6 @@ public class N_echantillon {
 
 	
 	// Constructeur
-
-
-
-
 	public N_echantillon(int n, int nbI){
 		System.out.println("Création n_echantillon");
 		n_echantillon=new Echantillon[n];

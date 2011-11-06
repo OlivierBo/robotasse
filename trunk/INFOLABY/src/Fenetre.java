@@ -13,6 +13,10 @@ import javax.swing.JPanel;
 
 
 public class Fenetre extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Panneau pan = new Panneau();
 	private JComboBox comboBoxNbE = new JComboBox();
 	private JComboBox comboBoxNbI = new JComboBox();
@@ -32,7 +36,8 @@ public class Fenetre extends JFrame {
 	private JLabel labelM = new JLabel("0");
 	private JLabel labelP = new JLabel("0");
 	private JLabel labelC1 = new JLabel("0");
-	private JLabel labelC2 = new JLabel("0");
+	private JLabel labelC2 = new JLabel("0"); 
+	
 	
 	
 	private boolean animated = true;
@@ -123,7 +128,7 @@ public class Fenetre extends JFrame {
 		container.setBackground (Color.white);
 		container.setLayout(new BorderLayout());
 		container.add (north2, BorderLayout.NORTH);
-		container.add (pan, BorderLayout.CENTER );
+		container.add (getPan(), BorderLayout.CENTER );
 		container.add (south, BorderLayout.SOUTH);
 
 		this.setContentPane(container);
@@ -131,7 +136,38 @@ public class Fenetre extends JFrame {
 	}
 
 	
-	
+	public boolean isAnimated() {
+		return animated;
+	}
+
+	public void setAnimated(boolean animated) {
+		this.animated = animated;
+	}
+
+
+
+	public Thread getT() {
+		return t;
+	}
+
+
+
+	public void setT(Thread t) {
+		this.t = t;
+	}
+
+
+
+	public Panneau getPan() {
+		return pan;
+	}
+
+	public void setPan(Panneau pan) {
+		this.pan = pan;
+	}
+
+
+
 	/**
 	* Classe interne implémentant l'interface ItemListener
 	*/
@@ -154,7 +190,7 @@ public class Fenetre extends JFrame {
 	class ItemActionResol implements ActionListener{
 		public void actionPerformed (ActionEvent e) {
 			
-		label1.setText("action sur "+ comboBoxTypeResolution.getSelectedItem() +" dans type de résolution " )  ;
+		label1.setText("action sur "+ comboBoxTypeResolution.getSelectedItem() +" dans type de résolution "+comboBoxTypeResolution.getSelectedIndex() )  ;
 		}
 		}
 	
@@ -168,8 +204,145 @@ public class Fenetre extends JFrame {
 			comboBoxNbE.setEnabled (true);
 			comboBoxNbI.setEnabled (true);
 			comboBoxTypeResolution.setEnabled (true);
+			
+			switch(comboBoxNbE.getSelectedIndex()){
+			case 0:
+				getPan().setNbEchantillon(1);
+				break;
+			case 1:
+				getPan().setNbEchantillon(2);
+				break;
+			case 2:
+				getPan().setNbEchantillon(3);
+				break;
+			case 3:
+				getPan().setNbEchantillon(4);
+				break;
+			case 4:
+				getPan().setNbEchantillon(5);
+				break;
+			case 5:
+				getPan().setNbEchantillon(6);
+				break;
+			case 6:
+				getPan().setNbEchantillon(7);
+				break;
+			case 7:
+				getPan().setNbEchantillon(8);
+				break;
+			case 8:
+				getPan().setNbEchantillon(9);
+				break;
+			case 9:
+				getPan().setNbEchantillon(10);
+				break;
+			}
+			
+			switch(comboBoxNbI.getSelectedIndex()){
+			case 0:
+				getPan().setNbIndividu(10);
+				break;
+			case 1:
+				getPan().setNbIndividu(20);
+				break;
+			case 2:
+				getPan().setNbIndividu(30);
+				break;
+			case 3:
+				getPan().setNbIndividu(40);
+				break;
+			case 4:
+				getPan().setNbIndividu(50);
+				break;
+			case 5:
+				getPan().setNbIndividu(60);
+				break;
+			case 6:
+				getPan().setNbIndividu(70);
+				break;
+			case 7:
+				getPan().setNbIndividu(80);
+				break;
+			case 8:
+				getPan().setNbIndividu(90);
+				break;
+			case 9:
+				getPan().setNbIndividu(100);
+				break;
+			case 10:
+				getPan().setNbIndividu(110);
+				break;
+			case 11:
+				getPan().setNbIndividu(120);
+				break;
+			case 12:
+				getPan().setNbIndividu(130);
+				break;
+			case 13:
+				getPan().setNbIndividu(140);
+				break;
+			case 14:
+				getPan().setNbIndividu(150);
+				break;
+			case 15:
+				getPan().setNbIndividu(160);
+				break;
+			case 16:
+				getPan().setNbIndividu(170);
+				break;
+			case 17:
+				getPan().setNbIndividu(180);
+				break;
+			case 18:
+				getPan().setNbIndividu(190);
+				break;
+			case 19:
+				getPan().setNbIndividu(200);
+				break;
+			}
+			
+			
 		label1.setText("Vous avez cliqué sur le bouton Lancer");
+		System.out.println("Parametres d'execution : NbE = "+comboBoxNbE.getSelectedItem()+"  NbI : "+comboBoxNbI.getSelectedItem()+ "  Algo  " +comboBoxTypeResolution.getSelectedItem());
 
+		switch(comboBoxTypeResolution.getSelectedIndex()){
+		case 0:
+			getPan().BFS(3);
+			break;
+		
+		
+		case 1:
+			getPan().BFS(3);
+			break;
+			
+		case 2:
+			break;
+			
+		case 3:
+			break;
+			
+		case 4:
+			break;
+			
+		case 5:
+			break;
+			
+		case 6:
+			break;
+			
+		case 7:
+			break;
+			
+		case 8:
+			break;
+			
+		case 9:
+			break;
+			
+		case 10:
+			break;
+		}
+		
 		}
 		}
 	
